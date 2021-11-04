@@ -1,0 +1,168 @@
+
+<h1>{{title}}</h1>
+
+<div ng-controller="MyCtrl">
+  <table cellspacing="30" cellpadding="0">
+   <colgroup span="7"></colgroup>
+
+   <tbody>
+     <tr class="days">
+       <th scope="col" title="Monday">M</th>
+       <th scope="col" title="Tuesday">T</th>
+       <th scope="col" title="Wednesday">W</th>
+       <th scope="col" title="Thursday">T</th>
+       <th scope="col" title="Friday">F</th>
+       <th scope="col" title="Saturday">S</th>
+       <th scope="col" title="Sunday">S</th>
+     </tr>
+    </tbody>
+  </table>
+ </div>
+     <tr>
+       <td>
+     <!-- <td *ngFor="let item of week" class="date">  -->
+       <!-- <td ng-repeat="let item in week" class="date"> </td> -->
+         <!-- <td class="date"> -->
+      <!-- <td>   -->
+      <!-- <button (click)="tabs.selectedIndex = 0"></button> -->
+       <mat-tab-group animationDuration="0ms" #tabs>
+            <!-- <mat-tab label="{{ item }}" >Content display</mat-tab> -->
+            <mat-tab></mat-tab>
+            <mat-tab label="01">Content 1</mat-tab>
+            <mat-tab label="02">Content 2</mat-tab>
+            <mat-tab label="03">Content 3</mat-tab>
+            <mat-tab label="04">Content 4</mat-tab>
+            <mat-tab label="05">Content 5</mat-tab>
+            <mat-tab label="06">Content 6</mat-tab>
+            <mat-tab label="07">Content 7</mat-tab>
+            <!-- <mat-tab label="Second">Content 2</mat-tab>
+            <mat-tab label="Third">Content 3</mat-tab> -->
+        </mat-tab-group>
+      </td>
+    </tr>
+   
+     <!-- </tbody>
+ </table>
+</div> -->
+
+<!-- <tr>
+   
+</tr> -->
+     <!-- <tr>
+       <td *ngFor="let item of days" class="days">
+         {{ item }}
+       </td>
+     </tr> -->
+     <!-- <tr>
+       <td *ngFor="let item of week" class="date" ng-href="item" ng-click="seatInfoDetails()">
+
+        <nav mat-tab-nav-bar [backgroundColor]="background">
+          <a mat-tab-link
+             (click)="activeLink = item"
+             [active]="activeLink == item"> {{ item }} </a> -->
+          <!-- <a mat-tab-link disabled>Disabled Link</a> -->
+        <!-- </nav>
+        </td> -->
+        
+        <!-- <mat-tab-group class="date-tabs">
+          <mat-tab class="date" label="{{item}}"> 
+            
+            <tr>
+            Content 1 
+
+          </tr>
+          </mat-tab> -->
+          <!-- <mat-tab label="Second"> Content 2 </mat-tab>
+          <mat-tab label="Third"> Content 3 </mat-tab> -->
+        <!-- </mat-tab-group> -->
+
+        <!-- <div class="tabs-resp-custom">
+          <ul class="nav nav-tabs">
+            <li class="nav-item" >
+            <a class="nav-link" [routerLink]="['item']" routerLinkActive="active">{{ item }}</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" [routerLink]="['tab2']" routerLinkActive="active">Tab 2</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active">
+            </div>
+          </div>
+        </div> -->
+
+         <!-- <button> -->
+          <!-- {{ item }} -->
+           <!-- <mat-tab-group>
+                <mat-tab> -->
+                    
+                                <!-- After seven iterations a new `<tr>` should be added -->
+                <!-- </mat-tab> 
+          </mat-tab-group> -->
+         <!-- </nav-tab> -->
+         <!-- </button>  -->
+     <!-- </tr> -->
+     <!-- <tr>
+      <div class="tabs-resp-custom">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['tab1']" routerLinkActive="active">Tab 1</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" [routerLink]="['tab2']" routerLinkActive="active">Tab 2</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active">
+          </div>
+        </div>
+      </div>
+     </tr> -->
+     <!-- <mat-tab-group
+                    >
+          <mat-tab *ngFor="let item of items">
+            {{ item }}
+
+          </mat-tab>          
+     </mat-tab-group> -->
+     <!-- <td> -->
+      <!-- <mat-tab-group mat-align-tabs="center" backgroundColor="primary">
+        <mat-tab label="Home">Home Content</mat-tab>
+        <mat-tab label="Overview">Overview Content</mat-tab>
+      </mat-tab-group> -->
+      <!-- <mat-tab-group (selectedTabChange)="tabChanged($event)" #tabGroup>
+        <mat-tab label="{{ item }}" *ngFor="let item of week | async">
+                       ...
+         </mat-tab>
+</mat-tab-group> -->
+<!-- <p-tabMenu [model]="week" [activeItem]="week[0]"></p-tabMenu> -->
+<!-- <mat-tab-group>
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+     </td>
+     <mat-tab-group>
+      <mat-tab label="First"> Content 1 </mat-tab>
+      <mat-tab label="Second"> Content 2 </mat-tab>
+      <mat-tab label="Third"> Content 3 </mat-tab>
+    </mat-tab-group> -->
+ 
+
+<!-- <h3>No animation</h3> -->
+<!-- 
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="First">Content 1</mat-tab>
+  <mat-tab label="Second">Content 2</mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
+
+<h3>Very slow animation</h3>
+<mat-tab-group animationDuration="2000ms">
+  <mat-tab label="First">Content 1</mat-tab>
+  <mat-tab label="Second">Content 2</mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group> -->
+
+
+<router-outlet></router-outlet>
