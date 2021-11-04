@@ -26,6 +26,7 @@ export class AppComponent {
   // items = ["01", "02", "03", "04", "05", "06", "07"];
   day = ["M", "T", "W", "T", "F", "S", "S"];
   week: any = [];
+  fulldate: any = [];
   activeLink = this.week[0];
   background: any = undefined;
   constructor(private _route: Router) {
@@ -74,16 +75,19 @@ export class AppComponent {
 
     for(let i=1; i<=7; i++) {
       let first = curr.getDate() - curr.getDay() + i
+      let day = new Date(curr.setDate(first)).toISOString().slice(0, 10)
       let date = new Date(curr.setDate(first)).getUTCDate()
-      var day
-      if(date < 10) day = "0" + date;
+      var newdate
+      if(date < 10) newdate = "0" + date;
       // let mydate = "0" + date.getDate().slice(-2)
       // let date = day.getUTCDate();
       // console.log("Array of day", day);
-      this.week.push(day)
+      this.fulldate.push(day)
+      this.week.push(newdate)
     }
     // this.week.push(info)
-    // console.log("Array of week", this.week);
+    console.log("Array of week", this.week);
+    console.log("Array of date", this.fulldate);
   }
 
 

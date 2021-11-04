@@ -2,7 +2,7 @@
 <h1>{{title}}</h1>
 
 <div ng-controller="MyCtrl">
-  <table cellspacing="30" cellpadding="0">
+  <table cellspacing="28" cellpadding="0">
    <colgroup span="7"></colgroup>
 
    <tbody>
@@ -18,28 +18,42 @@
     </tbody>
   </table>
  </div>
-     <tr>
-       <td>
+     <!-- <tr> -->
+       <!-- <td *ngFor="let item of week">{{item}}</td> -->
      <!-- <td *ngFor="let item of week" class="date">  -->
        <!-- <td ng-repeat="let item in week" class="date"> </td> -->
          <!-- <td class="date"> -->
       <!-- <td>   -->
       <!-- <button (click)="tabs.selectedIndex = 0"></button> -->
-       <mat-tab-group animationDuration="0ms" #tabs>
+       <mat-tab-group class="date" animationDuration="0ms" #tabs>
             <!-- <mat-tab label="{{ item }}" >Content display</mat-tab> -->
-            <mat-tab></mat-tab>
-            <mat-tab label="01">Content 1</mat-tab>
-            <mat-tab label="02">Content 2</mat-tab>
+            <table class="weekcalendar table">
+            <tr>
+            <td *ngFor="let item of week">
+            
+                
+                  <!-- <mat-tab></mat-tab> -->
+                  <mat-tab label={{item}}>
+                    {{item}}    
+                  </mat-tab>
+                
+
+            
+
+          </td>
+        </tr>
+      </table>
+            <!-- <mat-tab label="02">Content 2</mat-tab>
             <mat-tab label="03">Content 3</mat-tab>
             <mat-tab label="04">Content 4</mat-tab>
             <mat-tab label="05">Content 5</mat-tab>
             <mat-tab label="06">Content 6</mat-tab>
-            <mat-tab label="07">Content 7</mat-tab>
+            <mat-tab label="07">Content 7</mat-tab> -->
             <!-- <mat-tab label="Second">Content 2</mat-tab>
             <mat-tab label="Third">Content 3</mat-tab> -->
         </mat-tab-group>
-      </td>
-    </tr>
+      <!-- </td>
+    </tr> -->
    
      <!-- </tbody>
  </table>
