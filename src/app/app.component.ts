@@ -25,14 +25,17 @@ export class AppComponent {
   title = 'Work from Office Calendar';
   // items = ["01", "02", "03", "04", "05", "06", "07"];
   day = ["M", "T", "W", "T", "F", "S", "S"];
-  week: any = [];
-  fulldate: any = [];
-  activeLink = this.week[0];
+  // week: any = [];
+  // fulldate: any = [];
+  // weekdates: any = [];
+  weekdates: { week: any, fulldate: any }[] = [];
+  // activeLink = this.week[0];
   background: any = undefined;
   constructor(private _route: Router) {
-    console.log("Array of week", this.week);
+    // console.log("Array of week", this.week);
     // console.log("Array of week items", this.items);
   }
+  
 
   tabClick() {
     console.log('click');
@@ -82,12 +85,15 @@ export class AppComponent {
       // let mydate = "0" + date.getDate().slice(-2)
       // let date = day.getUTCDate();
       // console.log("Array of day", day);
-      this.fulldate.push(day)
-      this.week.push(newdate)
+      // this.fulldate.push(day)
+      this.weekdates.push({week: newdate, fulldate: day})
     }
     // this.week.push(info)
-    console.log("Array of week", this.week);
-    console.log("Array of date", this.fulldate);
+    // this.weekdates.push(this.week)
+    // this.weekdates.push(this.fulldate)
+    // console.log("Array of week", this.week);
+    // console.log("Array of date", this.fulldate);
+    console.log("Final Array with date formats for calendar view and Api", this.weekdates);
   }
 
 

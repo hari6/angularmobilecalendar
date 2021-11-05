@@ -29,17 +29,12 @@
             <!-- <mat-tab label="{{ item }}" >Content display</mat-tab> -->
             <table class="weekcalendar table">
             <tr>
-            <td *ngFor="let item of week">
-            
-                
-                  <!-- <mat-tab></mat-tab> -->
-                  <mat-tab label={{item}}>
-                    {{item}}    
+            <td>
+                  <mat-tab></mat-tab>
+                  <mat-tab *ngFor="let date of weekdates">
+                    <ng-template mat-tab-label>{{date.week}}</ng-template>
+                    {{date.fulldate}}   
                   </mat-tab>
-                
-
-            
-
           </td>
         </tr>
       </table>

@@ -56,6 +56,6 @@ mat-tab-group.mat-tab-group.ng-tns-c53-0.mat-primary {
     padding-right: 0px;
 }
 
-/* .mat-tab-labels > .mat-tab-label:first-child {
+.mat-tab-labels > .mat-tab-label:first-child {
     display: none;
-  } */
+  }
