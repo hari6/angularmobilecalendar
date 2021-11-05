@@ -59,3 +59,11 @@ mat-tab-group.mat-tab-group.ng-tns-c53-0.mat-primary {
 .mat-tab-labels > .mat-tab-label:first-child {
     display: none;
   }
+
+  table {
+    border-collapse: collapse;
+    text-indent: initial;
+    /* border-spacing: 2px; */
+    border-spacing: 20px;
+    padding: 5px 5px 5px 5px;
+}

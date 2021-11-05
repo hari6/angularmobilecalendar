@@ -32,9 +32,10 @@ h1 {
 
 user agent stylesheet
 table {
-    border-collapse: separate;
+    border-collapse: collapse;
     text-indent: initial;
-    border-spacing: 2px;
+    border-spacing: 20px;
+    padding: 5px 5px 5px 5px;
 }
 
 /* .mat-tab-group {
